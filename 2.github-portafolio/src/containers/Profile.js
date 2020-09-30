@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import styled from "styled-components";
-import Link from "../components/Link/Link";
-import List from "../components/List/List";
+import React, { Component } from 'react';
+import styled from 'styled-components';
+import Link from '../components/Link/Link';
+import List from '../components/List/List';
 
 const ProfileWrapper = styled.div`
   width: 50%;
@@ -19,13 +19,13 @@ class Profile extends Component {
       data: {},
       repos: [],
       loading: true,
-      error: "",
+      error: '',
     };
   }
 
   async componentDidMount() {
     try {
-      const profile = await fetch("https://api.github.com/users/mini0n");
+      const profile = await fetch('https://api.github.com/users/mini0n');
       const profileJSON = await profile.json();
 
       if (profileJSON) {
@@ -50,32 +50,32 @@ class Profile extends Component {
     const { data, loading, repos, error } = this.state;
 
     if (loading || error) {
-      return <div>{loading ? "Loading..." : error}</div>;
+      return <div>{loading ? 'Loading...' : error}</div>;
     }
 
     const items = [
       {
-        label: "html_url",
-        value: <Link url={data.html_url} title="Github URL" />,
+        label: 'html_url',
+        value: <Link url={data.html_url} title='Github URL' />,
       },
-      { label: "repos_url", value: data.repos_url },
-      { label: "name", value: data.name },
-      { label: "company", value: data.company },
-      { label: "location", value: data.location },
-      { label: "email", value: data.email },
-      { label: "bio", value: data.bio },
+      { label: 'repos_url', value: data.repos_url || '[n/a]' },
+      { label: 'name', value: data.name || '[n/a]' },
+      { label: 'company', value: data.company || '[n/a]' },
+      { label: 'location', value: data.location || '[n/a]' },
+      { label: 'email', value: data.email || '[n/a]' },
+      { label: 'bio', value: data.bio || '[n/a]' },
     ];
 
     const projects = repos.map((repo) => ({
       label: repo.name,
-      value: <Link url={repo.html_url} title="Repo URL" />,
+      value: <Link url={repo.html_url} title='Repo URL' />,
     }));
 
     return (
       <ProfileWrapper>
-        <Avatar src={data.avatar_url} alt="avatar" />
-        <List title="Profile" items={items} />
-        <List title="Projects" items={projects} />
+        <Avatar src={data.avatar_url} alt='avatar' />
+        <List title='Profile' items={items} />
+        <List title='Projects' items={projects} />
       </ProfileWrapper>
     );
   }
