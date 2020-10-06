@@ -19,7 +19,7 @@ const Title = styled.h1`
 
 const Header = () => (
   <HeaderWrapper>
-    <Title>Managment Boards</Title>
+    <Title>Management Boards</Title>
   </HeaderWrapper>
 );
 
