@@ -5,7 +5,7 @@ const LaneWrapper = styled.div`
   list-style: none;
   text-align: left;
   padding: 0;
-  background: lightGray;
+  background: #2e4053;
   border-radius: 20px;
   min-height: 50vh;
   width: 24vw;
@@ -19,7 +19,7 @@ const Title = styled.h2`
   width: 100%;
   padding-bottom: 10px;
   text-align: center;
-  border-bottom: 1px solid darkGray;
+  border-bottom: 2px solid #212f3c;
 `;
 
 const Lane = ({ title }) => (
