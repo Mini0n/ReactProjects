@@ -16,6 +16,10 @@ const GlobalStyle = createGlobalStyle`
 
     background-color: #212F3C;
   }
+
+  html, body, #root, #root>div {
+    height: 100%;
+  }
 `;
 
 const AppWrapper = styled.div`
