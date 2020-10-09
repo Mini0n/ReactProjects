@@ -8,7 +8,7 @@ const BoardWrapper = styled.div`
   justify-content: space-between;
   flex-direction: row;
   margin: 1%;
-  height: 80vmin;
+  /* height: 80vmin; */
 
   @media (max-width: 800px) {
     flex-direction: column;

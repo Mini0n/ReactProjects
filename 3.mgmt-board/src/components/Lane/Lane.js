@@ -6,13 +6,18 @@ const LaneWrapper = styled.div`
   list-style: none;
   text-align: left;
   padding: 0;
-  background: #2e4053;
-  border-radius: 20px;
+  /* background: #2e4053; */
+  background: rgba(98, 101, 103, 0);
+  /* border-radius: 20px; */
   min-height: 50vh;
   width: 24vw;
+  /* border-right: 1px solid #ffffff;
+  border-left: 1px solid #ffffff; */
 
-  @media (max-width: 768px) {
-    margin-bottom: 5%;
+  @media (max-width: 800px) {
+    margin: auto;
+    margin-bottom: 2%;
+    width: 80%;
   }
 `;
 
@@ -27,8 +32,12 @@ const Alert = styled.div`
 const Title = styled.h2`
   width: 100%;
   padding-bottom: 10px;
+  margin-bottom: 0px;
   text-align: center;
-  border-bottom: 2px solid #212f3c;
+  /* border-bottom: 2px solid #212f3c; */
+  border-bottom: 2px solid #000000;
+
+  color: rgb(220, 118, 51);
 `;
 
 const Lane = ({ tickets, loading, error, title }) => (
