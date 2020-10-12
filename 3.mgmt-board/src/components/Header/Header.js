@@ -22,7 +22,7 @@ const Title = styled.h1`
 
 const Header = () => (
   <HeaderWrapper>
-    <Title>::: TODO :::</Title>
+    <Title>::: TUDU :::</Title>
   </HeaderWrapper>
 );
 
