@@ -5,8 +5,10 @@ import Ticket from '../components/Ticket/Ticket';
 
 const TicketsWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   flex-direction: row;
+  justify-content: flex-start;
+
   margin: 5%;
 
   @media (max-width: 768px) {
